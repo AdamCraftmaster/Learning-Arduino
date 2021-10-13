@@ -38,4 +38,4 @@ This project is [MIT](https://github.com/AdamCraftmaster/Learning-Arduino/blob/m
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
 
 ## TODO
-gradient(V) rainbow alternating(V) movingrainbow fadetoblack
+gradient(V) rainbow(V) alternating(V) movingrainbow fadetoblack
