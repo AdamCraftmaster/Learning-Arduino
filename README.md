@@ -10,6 +10,14 @@
 
 > A compilation of some of my projects that I made while learning arduino
 
+> Requires Ardiuno Uno and NeoPixel ring.
+
+## Prerequisites
+
+```sh
+  Adafruit Neopixel >= 1.10.0
+```
+
 ## Author
 
 👤 **Adam Nativ**
