@@ -4,34 +4,46 @@
 #endif
 
 int const NUM_PIXELS = 12;
-int8_t const PIN = 13;
+int8_t const PIN = 11;
 Adafruit_NeoPixel pixels;
 
 void setup() {
+  Serial.begin(9600);
   pixels = Adafruit_NeoPixel(NUM_PIXELS, PIN, NEO_GRB+NEO_KHZ800);
   pixels.begin();
   pixels.show(); // Init all pixels to "off"
 }
 void loop() {
-  // Colors are defined in 0xRRGGBB format.
-  while (true) {
-    for (int i = 0; i <= 12; i++) {
-      pixels.setPixelColor(i, 0x000000);
-      pixels.setPixelColor(i+1, 0xFF8000);
-      pixels.setPixelColor(i+2, 0xFFFF00);
-      pixels.setPixelColor(i+3, 0x80FF00);
-      pixels.setPixelColor(i+4, 0x00FF00);
-      pixels.setPixelColor(i+5, 0x00FF80);
-      pixels.setPixelColor(i+6, 0x00FFFF);
-      pixels.setPixelColor(i+7, 0x0080FF);
-      pixels.setPixelColor(i+8, 0x0000FF);
-      pixels.setPixelColor(i+9, 0x8000FF);
-      pixels.setPixelColor(i+10, 0xFF00FF);
-      pixels.setPixelColor(i+11, 0xFF0080);
-      pixels.setPixelColor(i+12, 0xFF0000);
+    // Colors are defined in 0xRRGGBB format.
+  /*    
+   *    pixels.setPixelColor(i, 0x000000);
+   *    pixels.setPixelColor(i, 0xFF8000);
+   */
+    pixels.setPixelColor(1, 0xFF0000);
+    pixels.setPixelColor(2, 0xFF0000);
+    pixels.setPixelColor(3, 0xFF0000);
+    pixels.setPixelColor(4, 0xFF0000);
+    pixels.setPixelColor(5, 0xFF0000);
+    pixels.setPixelColor(6, 0xFF0000);
+    pixels.setPixelColor(7, 0xFF0000);
+    pixels.setPixelColor(8, 0xFF0000);
+    pixels.setPixelColor(9, 0xFF0000);
+    pixels.setPixelColor(10, 0xFF0000);
+    pixels.setPixelColor(11, 0xFF0000);
+    pixels.setPixelColor(0, 0xFF0000);
+    pixels.show();
+    Serial.println("test");
+    for (int j = 255; j > 0; j-=5) {
+      Serial.println(j);
+      pixels.setBrightness(j);
       pixels.show();
       delay(100);
     }
-    delay(1000);
-  }
+    for (int k = 5; k <= 255; k+=5) {
+      Serial.println(k);
+      pixels.setBrightness(k);
+      pixels.show();
+      delay(100);
+    }
+    delay(100);
 }
