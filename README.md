@@ -6,6 +6,7 @@
   <a href="https://twitter.com/AdamCraftmaster" target="_blank">
     <img alt="Twitter: AdamCraftmaster" src="https://img.shields.io/twitter/follow/AdamCraftmaster.svg?style=social" />
   </a>
+  <a href="https://www.codefactor.io/repository/github/adamcraftmaster/learning-arduino"><img src="https://www.codefactor.io/repository/github/adamcraftmaster/learning-arduino/badge" alt="CodeFactor" /></a>
 </p>
 
 > A compilation of some of my projects that I made while learning arduino
